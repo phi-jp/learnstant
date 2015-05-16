@@ -8,19 +8,18 @@ angular.module('App', []).controller('ItemListController', function($scope) {
       list: [
         {name:'hoge', link:'http://goo.gl/KMf0lh'},
         {name:'foo', link:'http://goo.gl/zrPq4d'},
-        {name:'bar', link:'hoge.html'},
+        {name:'bar', link:'http://goo.gl/zrPq4d'},
       ],
     },
     {
       name: 'if 文を学ぼう',
       list: [
-        {name:1, link:'hoge.html'},
-        {name:2, link:'hoge.html'},
-        {name:3, link:'hoge.html'},
+        {name:1, link:'http://goo.gl/zrPq4d'},
+        {name:2, link:'http://goo.gl/zrPq4d'},
+        {name:3, link:'http://goo.gl/zrPq4d'},
       ],
     },
   ];
-
 
   $scope.init = function() {
     var hash = location.hash.substr(1);
@@ -39,6 +38,8 @@ angular.module('App', []).controller('ItemListController', function($scope) {
       return elm.id == itemId || elm.name == itemId;
     })[0];
     item.active = true;
+
+    $('#frame').attr('src', item.link);
   };
 
   $scope.click = function(item, elm) {
@@ -47,8 +48,10 @@ angular.module('App', []).controller('ItemListController', function($scope) {
 
     location.hash = itemId + '/' + elmId;
 
-    item.list.forEach(function(elm) {
-      elm.active = false;
+    CategoryList.items.forEach(function(item) {
+      item.list.forEach(function(elm) {
+        elm.active = false;
+      });
     });
     elm.active = true;
   };
