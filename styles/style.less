@@ -1,13 +1,51 @@
 
-header, main {
-	padding-left: 240px;
+* {
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+         -o-box-sizing: border-box;
+        -ms-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+html, body {
+	height: 100%;
+}
+
+
+ul.side-nav.fixed, ul.collapsible-accordion {
+	/*background: green !important;*/
+}
+
+ul.side-nav.fixed li a {
+	/*color: white;*/
 }
 
 main {
-	background: red;
+	width: 100%;
+	height: 100%;
+	padding-left: 240px;
+
+	iframe {
+		display: block;
+		width: 100%;
+		height: 100%;
+		border: none;
+		/*
+		width: 100%;
+		height: 100%;
+		top: 0px;
+		left: 240px;
+		right: 0px;
+		border: none;
+		margin: auto;
+		*/
+	}
 }
 
-
+// angularjs
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+	display: none !important;
+}
 
 // --------------
 
@@ -135,7 +173,6 @@ a.button-collapse.top-nav {
   height: 100%;
   pointer-events: none; }
 
-/*
 @media only screen and (max-width: 992px) {
   #front-page-nav ul.side-nav li {
     float: none;
@@ -146,7 +183,6 @@ a.button-collapse.top-nav {
       background-color: transparent; }
   #front-page-nav ul.side-nav a {
     color: #444; } }
-*/
 
 #responsive-img {
   width: 80%;
