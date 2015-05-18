@@ -1,6 +1,22 @@
 # learnstant
 学ぶ(learn) + instant = learnstant.com
 
+## setup
+
+```
+$ npm install
+```
+
+
+## start
+
+```
+$ node app.js
+```
+
+access to <http://localhost:3000>
+
+
 ## 内容
 
 - Tutorial
