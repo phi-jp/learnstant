@@ -1,0 +1,10 @@
+extends layout
+
+block content
+  include parts/header.html
+
+  main.main
+    iframe#frame(name="frame", src="http://phi-jp.github.io/runstant/release/beta/")
+
+block footer
+  script(src="/scripts/main.js")

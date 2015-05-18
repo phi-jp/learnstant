@@ -1,0 +1,37 @@
+<header>
+  <div class="container">
+    <a href="#" data-activates="nav-mobile" class="button-collapse top-nav full"><i class="mdi-navigation-menu"></i></a></div>
+  
+  <ul id="nav-mobile" class="side-nav fixed" ng-controller="ItemListController as itemList" data-ng-init="init()">
+
+    <li class="logo">
+      <a id="logo-container" href="http://materializecss.com/" class="brand-logo">
+        <!--
+        <img src='' />
+      -->
+      </a>
+    </li>
+    <li class="bold"><a href="http://goo.gl/rBFc0b" target="frame" class="waves-effect waves-teal">About & Getting Started</a></li>
+
+    <li class="no-padding">
+      <ul class="collapsible collapsible-accordion">
+
+        <li class="bold" ng-repeat="item in itemList.items" ng-cloak>
+          <a class="collapsible-header waves-effect waves-teal" ng-class="{active:item.active}">
+            {{$index}}. {{item.name}} ↓
+          </a>
+          <div class="collapsible-body" style="">
+            <ul>
+              <li ng-repeat="elm in item.list" ng-class="{active:elm.active}">
+                <a href="{{elm.link}}" target="frame" ng-click="click(item, elm);">{{elm.name}}</a>
+              </li>
+            </ul>
+          </div>
+        </li>
+
+      </ul>
+    </li>
+    <li class="bold"><a href="#" class="waves-effect waves-teal">戻る</a></li>
+
+  </ul>
+</header>
