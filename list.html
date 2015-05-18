@@ -9,6 +9,9 @@
     <title>learnstant</title>
     <meta name="description" content="${description}" />
 
+    <!-- json2 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/json2/20140204/json2.js"></script>
+
     <!-- less -->
     <link rel="stylesheet/less" type="text/css" href="styles/style.less">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/less.js/2.5.0/less.min.js"></script>
@@ -40,7 +43,7 @@
 
             <li class="bold" ng-repeat="item in itemList.items" ng-cloak>
               <a class="collapsible-header waves-effect waves-teal" ng-class="{active:item.active}">
-                {{item.name}} ↓
+                {{$index}}. {{item.name}} ↓
               </a>
               <div class="collapsible-body" style="">
                 <ul>
@@ -65,7 +68,7 @@
     <!-- materialize -->
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.96.1/css/materialize.min.css' />
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.96.1/js/materialize.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.96.1/js/materialize.js'></script>
 
   </body>
 </html>

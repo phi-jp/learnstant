@@ -1,27 +1,11 @@
-angular.module('App', []).controller('ItemListController', function($scope) {
+angular.module('App', []).controller('ItemListController', function($scope, $http) {
 
   var CategoryList = this;
-  CategoryList.items = [
-    {
-      id: 'var',
-      name: '変数を学ぼう',
-      list: [
-        {name:'hoge', link:'http://goo.gl/KMf0lh'},
-        {name:'foo', link:'http://goo.gl/zrPq4d'},
-        {name:'bar', link:'http://goo.gl/zrPq4d'},
-      ],
-    },
-    {
-      name: 'if 文を学ぼう',
-      list: [
-        {name:1, link:'http://goo.gl/zrPq4d'},
-        {name:2, link:'http://goo.gl/zrPq4d'},
-        {name:3, link:'http://goo.gl/zrPq4d'},
-      ],
-    },
-  ];
 
-  $scope.init = function() {
+  $http.get('data/list.json').success(function(data) {
+    CategoryList.items = data;
+
+    // 
     var hash = location.hash.substr(1);
     if (!hash) return ;
 
@@ -40,6 +24,15 @@ angular.module('App', []).controller('ItemListController', function($scope) {
     item.active = true;
 
     $('#frame').attr('src', item.link);
+
+    setTimeout(function() {
+      $('.collapsible').collapsible({
+        accordion : true // A setting that changes the collapsible behavior to expandable instead of the default accordion style
+      });
+    }, 1000);
+  });
+
+  $scope.init = function() {
   };
 
   $scope.click = function(item, elm) {
