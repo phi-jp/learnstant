@@ -16,6 +16,10 @@ $ node app.js
 
 access to <http://localhost:3000>
 
+## site map
+
+- <http://localhost:category/javascript/tips>
+
 
 ## 内容
 
