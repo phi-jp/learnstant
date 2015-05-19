@@ -19,8 +19,10 @@ app.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
 
-app.get('/category/', function(req, res, next) {
-  res.render('category', { title: 'Express' });
+app.get('/category/:lang/:type', function(req, res, next) {
+  res.render('category', req.params);
+  // console.log(req.params);
+  // res.send(req.params);
 });
 
 var server = app.listen(3000, function() {

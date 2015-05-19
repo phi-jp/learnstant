@@ -2,7 +2,8 @@ angular.module('App', []).controller('ItemListController', function($scope, $htt
 
   var CategoryList = this;
 
-  $http.get('/data/javascript/tips.json').success(function(data) {
+  var filename = LANG + '/' + TYPE + '.json';
+  $http.get('/data/' + filename).success(function(data) {
     CategoryList.items = data;
 
     setTimeout(function() {

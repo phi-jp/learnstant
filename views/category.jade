@@ -7,4 +7,7 @@ block content
     iframe#frame(name="frame", src="http://phi-jp.github.io/runstant/release/beta/")
 
 block footer
+  script.
+    var LANG = "#{lang}";
+    var TYPE = "#{type}";
   script(src="/scripts/main.js")
