@@ -3,13 +3,7 @@ extends layout
 block content
   header
     ul#nav-mobile.side-nav.fixed
-      li.logo
-        h1.right-align
-          a#logo-container.brand-logo
-            | learn
-            span stant
-        div.right-align
-          a(href="http://twitter.com/phi_jp", target='_blank') @phi_jp
+      include parts/logo
       li
         a(href="#") About
       li
