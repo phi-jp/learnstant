@@ -9,21 +9,25 @@ var app = express();
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
 
-// 
+// middleware
 app.use(logger('dev'));
-app.use(express.static(path.join(__dirname, 'public')));
 app.use(require('less-middleware')(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'public')));
+
 
 
 app.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
 
-app.get('/category/:lang/:type', function(req, res, next) {
+app.get('/category/:category/:group?/:item?', function(req, res, next) {
   res.render('category', req.params);
-  // console.log(req.params);
-  // res.send(req.params);
 });
+
+app.get('/:username', function(req, res, next) {
+  res.send(req.params.username);
+});
+
 
 var server = app.listen(3000, function() {
   var host = server.address().address;

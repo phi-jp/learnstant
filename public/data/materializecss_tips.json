@@ -1,0 +1,11 @@
+[
+  {
+    "id": "var",
+    "name": "collapsible",
+    "list": [
+      {"name":"accordion", "link":"http://goo.gl/kjmX4M"},
+      {"name":"expandable", "link":"http://goo.gl/VDw9tQ"},
+      {"name":"bar", "link":"http://goo.gl/zrPq4d"}
+    ]
+  }
+]

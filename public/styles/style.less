@@ -1,3 +1,5 @@
+@baseColor:hsl(200, 79%, 68%);
+/*@baseColor:hsl(100, 100%, 66%);*/
 
 * {
     -webkit-box-sizing: border-box;
@@ -11,6 +13,31 @@ html, body {
 	height: 100%;
 }
 
+header {
+  .logo {
+    background-color: @baseColor !important;
+    margin: 0px !important;
+    padding: 30px 10px;
+
+    h1 {
+      margin: 0px;
+      a {
+        padding: 0px !important;
+        color: white !important;
+        font-size: 3rem !important;
+        font-weight: bold;
+        span {
+          font-weight: 200 !important;
+        }
+      }
+    }
+  }
+
+  .collapsible-body li.active {
+    background-color: @baseColor !important;
+  }
+
+}
 
 ul.side-nav.fixed, ul.collapsible-accordion {
 	/*background: green !important;*/
@@ -133,167 +160,3 @@ ul.side-nav.fixed {
 
 .bold > a {
   font-weight: bold; }
-
-#logo-container {
-  height: 57px;
-  margin-bottom: 32px; }
-
-nav.top-nav {
-  height: 122px;
-  box-shadow: none; }
-  nav.top-nav a.page-title {
-    line-height: 122px;
-    font-size: 48px; }
-
-a.button-collapse.top-nav {
-  position: absolute;
-  text-align: center;
-  height: 48px;
-  width: 48px;
-  left: 7.5%;
-  top: 0;
-  float: none;
-  margin-left: 1.5rem;
-  color: #fff;
-  font-size: 32px;
-  z-index: 2; }
-  a.button-collapse.top-nav.full {
-    line-height: 122px; }
-
-@media only screen and (max-width : 600px) {
-  a.button-collapse.top-nav {
-    left: 5%; } }
-
-@media only screen and (max-width : 992px) {
-  nav .nav-wrapper {
-    text-align: center; }
-    nav .nav-wrapper a.page-title {
-      font-size: 36px; } }
-
-@media only screen and (min-width : 993px) {
-  .container {
-    width: 85%; } }
-
-#front-page-logo {
-  display: inline-block;
-  height: 100%;
-  pointer-events: none; }
-
-@media only screen and (max-width: 992px) {
-  #front-page-nav ul.side-nav li {
-    float: none;
-    padding: 0 15px; }
-    #front-page-nav ul.side-nav li:hover {
-      background-color: #ddd; }
-    #front-page-nav ul.side-nav li .active {
-      background-color: transparent; }
-  #front-page-nav ul.side-nav a {
-    color: #444; } }
-
-#responsive-img {
-  width: 80%;
-  display: block;
-  margin: 0 auto; }
-
-#index-banner {
-  background-color: #ee6e73; }
-  #index-banner .container {
-    position: relative; }
-  #index-banner .header {
-    color: #FFF; }
-  #index-banner h4 {
-    margin-bottom: 40px; }
-  #index-banner h1 {
-    margin-top: 16px; }
-
-@media only screen and (max-width : 992px) {
-  #index-banner h1 {
-    margin-top: 60px; }
-  #index-banner h4 {
-    margin-bottom: 15px; } }
-
-@media only screen and (max-width : 600px) {
-  #index-banner h4 {
-    margin-bottom: 0; } }
-
-.github-commit {
-  padding: 14px 0;
-  height: 64px;
-  line-height: 36px;
-  background-color: #5c5757;
-  color: #e6e6e6;
-  font-size: .9rem; }
-
-@media only screen and (max-width : 992px) {
-  .github-commit {
-    text-align: center; } }
-
-#github-button {
-  background-color: #6f6d6d;
-  -webkit-transition: .25s ease;
-  -moz-transition: .25s ease;
-  -o-transition: .25s ease;
-  -ms-transition: .25s ease;
-  transition: .25s ease; }
-  #github-button:hover {
-    background-color: #797777; }
-
-.sha {
-  color: #f0f0f0;
-  margin: 0 6px 0 6px; }
-
-#download-button {
-  background-color: #f3989b;
-  width: 260px;
-  height: 70px;
-  line-height: 70px;
-  font-size: 18px;
-  font-weight: 400; }
-  #download-button:hover {
-    background-color: #f5a5a8; }
-
-.promo {
-  width: 100%; }
-  @media only screen and (max-width : 992px) {
-    .promo {
-      width: 60%;
-      margin: 0 auto;
-      display: block; } }
-  .promo i {
-    color: #ee6e73;
-    font-size: 7rem;
-    display: block; }
-
-.promo-caption {
-  font-size: 1.7rem;
-  font-weight: 500;
-  margin-top: 5px;
-  margin-bottom: 0; }
-
-#front-page-nav {
-  background-color: #FFF;
-  position: relative; }
-  #front-page-nav a {
-    color: #ee6e73; }
-  #front-page-nav li:hover {
-    background-color: #fdeaeb; }
-  #front-page-nav li.active {
-    background-color: #fdeaeb; }
-  #front-page-nav .container {
-    height: inherit; }
-
-.col.grid-example {
-  border: 1px solid #eee;
-  margin: 7px 0;
-  text-align: center;
-  line-height: 50px;
-  font-size: 28px;
-  background-color: tomato;
-  color: white;
-  padding: 0; }
-  .col.grid-example span {
-    font-weight: 200;
-    line-height: 50px; }
-
-.promo-example {
-  overflow: hidden; }

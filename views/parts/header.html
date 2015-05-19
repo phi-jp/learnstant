@@ -1,20 +1,26 @@
 <header>
+  <!--
   <div class="container">
-    <a href="#" data-activates="nav-mobile" class="button-collapse top-nav full"><i class="mdi-navigation-menu"></i></a></div>
+    <a href="#" data-activates="nav-mobile" class="button-collapse top-nav full"><i class="mdi-navigation-menu"></i></a>
+  </div>
+-->
   
   <ul id="nav-mobile" class="side-nav fixed" ng-controller="ItemListController as itemList" data-ng-init="init()">
 
     <li class="logo">
-      <a id="logo-container" href="http://materializecss.com/" class="brand-logo">
-        <!--
-        <img src='' />
-      -->
-      </a>
+      <h1 class='right-align'>
+        <a id="logo-container" href="http://materializecss.com/" class="brand-logo">
+          learn<span>stant</span> <!-- <img src='' /> -->
+        </a>
+      </h1>
+      <div class='right-align'>
+        @phi_jp
+      </div>
     </li>
     <li class="bold"><a href="http://goo.gl/rBFc0b" target="frame" class="waves-effect waves-teal">About & Getting Started</a></li>
 
     <li class="no-padding">
-      <ul class="collapsible collapsible-accordion">
+      <ul class="collapsible collapsible-accordion" data-collapsible="expandable">
 
         <li class="bold" ng-repeat="item in itemList.items" ng-cloak>
           <a class="collapsible-header waves-effect waves-teal" ng-class="{active:item.active}">
@@ -23,7 +29,9 @@
           <div class="collapsible-body" style="">
             <ul>
               <li ng-repeat="elm in item.list" ng-class="{active:elm.active}">
-                <a href="{{elm.link}}" target="frame" ng-click="click(item, elm);">{{elm.name}}</a>
+                <a href="{{elm.link}}" target="frame" ng-click="click(item, elm);">
+                  {{$index}}. {{elm.name}}
+                </a>
               </li>
             </ul>
           </div>
@@ -34,4 +42,5 @@
     <li class="bold"><a href="#" class="waves-effect waves-teal">戻る</a></li>
 
   </ul>
+
 </header>

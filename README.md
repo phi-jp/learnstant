@@ -18,7 +18,8 @@ access to <http://localhost:3000>
 
 ## site map
 
-- <http://localhost:category/javascript/tips>
+- <http://localhost:3000/category/javascript_tips>
+- <http://localhost:3000/category/materializecss_tips>
 
 
 ## 内容

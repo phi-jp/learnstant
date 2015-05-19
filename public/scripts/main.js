@@ -2,13 +2,13 @@ angular.module('App', []).controller('ItemListController', function($scope, $htt
 
   var CategoryList = this;
 
-  var filename = LANG + '/' + TYPE + '.json';
+  var filename = CATEGORY + '.json';
   $http.get('/data/' + filename).success(function(data) {
     CategoryList.items = data;
 
     setTimeout(function() {
       $('.collapsible').collapsible({
-        accordion : true // A setting that changes the collapsible behavior to expandable instead of the default accordion style
+        accordion : false // A setting that changes the collapsible behavior to expandable instead of the default accordion style
       });
     }, 1000);
 
