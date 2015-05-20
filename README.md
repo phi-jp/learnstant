@@ -16,6 +16,22 @@ $ node app.js
 
 access to <http://localhost:3000>
 
+## mongodb
+
+start
+
+```
+$ mongod --dbpath db --logpath=mongodb.log &
+```
+
+stop
+
+```
+$ mongod --shutdown
+or 
+$ kill -2 
+```
+
 ## site map
 
 - <http://localhost:3000/category/javascript_tips>
