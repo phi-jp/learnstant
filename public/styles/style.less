@@ -14,30 +14,6 @@ html, body {
 }
 
 header {
-  .logo {
-    background-color: @baseColor !important;
-    margin: 0px !important;
-    padding: 30px 10px;
-
-    h1 {
-      margin: 0px;
-      a {
-        padding: 0px !important;
-        color: white !important;
-        font-size: 3rem !important;
-        font-weight: bold;
-        span {
-          font-weight: 200 !important;
-        }
-      }
-    }
-
-    div {
-      a {
-        padding: 0px !important;
-      }
-    }
-  }
 
   a.collapsible-header {
     color: hsl(0, 0%, 20%) !important;
@@ -85,10 +61,105 @@ main {
 	}
 }
 
+
+
 // angularjs
 [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
 	display: none !important;
 }
+
+
+// ad support
+@adHeight: 140px;
+
+#nav-mobile {
+  padding-top: 155px;
+  padding-bottom: @adHeight + 65px;
+}
+
+
+ul.side-nav.fixed {
+  overflow: hidden;
+
+  li {
+    line-height: 44px;
+
+    &:hover, &.active {
+      background-color: rgba(0, 0, 0, 0.05);
+    }
+
+    a {
+      font-size: 13px;
+      line-height: 44px;
+      height: 44px;
+    }
+  }
+  ul.collapsible-accordion {
+    background-color: #FFF;
+  }
+
+  &:hover {
+    overflow-y: auto;
+  }
+
+  li.logo {
+    width: 240px;
+    top: 0px;
+    position: fixed;
+    z-index: 512;
+    -webkit-transform: translate3d(0,0,0);
+
+    text-align: center;
+    margin-top: 32px;
+    margin-bottom: 16px;
+    border-bottom: 1px solid #ddd;
+    &:hover {
+      background-color: transparent;
+    }
+
+    background-color: @baseColor !important;
+    margin: 0px !important;
+    padding: 30px 10px;
+
+    h1 {
+      margin: 0px;
+      a {
+        padding: 0px !important;
+        color: white !important;
+        font-size: 3rem !important;
+        font-weight: bold;
+        span {
+          font-weight: 200 !important;
+        }
+      }
+    }
+
+    div {
+      a {
+        padding: 0px !important;
+      }
+    }
+  }
+
+  li.ad {
+    bottom: 0px;
+    position: fixed;
+    z-index: 512;
+    -webkit-transform: translate3d(0,0,0);
+    height: @adHeight;
+    width: 240px;
+    background: @baseColor;
+
+    &:hover {
+      background-color: red;
+    }
+  }
+
+}
+.bold > a {
+  font-weight: bold;
+}
+
 
 // --------------
 
@@ -142,31 +213,4 @@ footer.example {
   header, main, footer {
     padding-left: 0; } }
 
-/********************
-  Index Page Styles
-********************/
-ul.side-nav.fixed li.logo {
-  text-align: center;
-  margin-top: 32px;
-  margin-bottom: 16px;
-  border-bottom: 1px solid #ddd; }
-  ul.side-nav.fixed li.logo:hover {
-    background-color: transparent; }
 
-ul.side-nav.fixed {
-  overflow: hidden; }
-  ul.side-nav.fixed li {
-    line-height: 44px; }
-    ul.side-nav.fixed li:hover, ul.side-nav.fixed li.active {
-      background-color: rgba(0, 0, 0, 0.05); }
-    ul.side-nav.fixed li a {
-      font-size: 13px;
-      line-height: 44px;
-      height: 44px; }
-  ul.side-nav.fixed ul.collapsible-accordion {
-    background-color: #FFF; }
-  ul.side-nav.fixed:hover {
-    overflow-y: auto; }
-
-.bold > a {
-  font-weight: bold; }
